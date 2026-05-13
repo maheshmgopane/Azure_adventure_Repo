@@ -1,44 +1,40 @@
 {
-	"name": "DS_ADLS_Bronze",
+	"name": "DS_config",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LK_ADLSGen2",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"para_sink_folder": {
+			"para_config_container": {
 				"type": "String"
 			},
-			"para_sink_filename": {
+			"para_config_folder": {
 				"type": "String"
 			},
-			"para_contianer_name": {
+			"para_config_filename": {
 				"type": "String"
 			}
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().para_sink_filename",
+					"value": "@dataset().para_config_filename",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().para_sink_folder",
+					"value": "@dataset().para_config_folder",
 					"type": "Expression"
 				},
 				"fileSystem": {
-					"value": "@dataset().para_contianer_name",
+					"value": "@dataset().para_config_container",
 					"type": "Expression"
 				}
-			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			}
 		},
-		"schema": []
+		"schema": {}
 	}
 }
