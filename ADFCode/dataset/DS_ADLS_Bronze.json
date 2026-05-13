@@ -11,6 +11,9 @@
 			},
 			"para_sink_filename": {
 				"type": "String"
+			},
+			"para_contianer_name": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
@@ -26,7 +29,10 @@
 					"value": "@dataset().para_sink_folder",
 					"type": "Expression"
 				},
-				"fileSystem": "bronze"
+				"fileSystem": {
+					"value": "@dataset().para_contianer_name",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
