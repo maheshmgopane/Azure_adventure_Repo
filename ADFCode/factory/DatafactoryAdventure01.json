@@ -1,0 +1,15 @@
+{
+	"name": "DatafactoryAdventure01",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0e2b4a8a-998f-4379-9816-5b627fd65532",
+		"tenantId": "f154ca4e-5837-46d5-8188-ecf1dbe8acac"
+	}
+}
