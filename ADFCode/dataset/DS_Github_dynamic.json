@@ -1,15 +1,12 @@
 {
-	"name": "DS_ADLS_Bronze",
+	"name": "DS_Github_dynamic",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "LK_ADLSGen2",
+			"referenceName": "LK_github",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"para_sink_folder": {
-				"type": "String"
-			},
-			"para_sink_filename": {
+			"Para_relative_url": {
 				"type": "String"
 			}
 		},
@@ -17,16 +14,11 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().para_sink_filename",
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().Para_relative_url",
 					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().para_sink_folder",
-					"type": "Expression"
-				},
-				"fileSystem": "bronze"
+				}
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
