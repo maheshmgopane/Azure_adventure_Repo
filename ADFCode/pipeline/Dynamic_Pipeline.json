@@ -116,23 +116,23 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "JsonSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+							"type": "JsonReadSettings"
 						}
 					},
 					"dataset": {
-						"referenceName": "DS_ADLS_Bronze",
+						"referenceName": "DS_config",
 						"type": "DatasetReference",
 						"parameters": {
-							"para_sink_folder": "config",
-							"para_sink_filename": "Config.json",
-							"para_contianer_name": "parameters"
+							"para_config_container": "parameters",
+							"para_config_folder": "config",
+							"para_config_filename": "Config.json"
 						}
 					},
 					"firstRowOnly": false
