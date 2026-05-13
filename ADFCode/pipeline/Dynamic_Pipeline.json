@@ -134,7 +134,8 @@
 							"para_sink_filename": "Config.json",
 							"para_contianer_name": "parameters"
 						}
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],
