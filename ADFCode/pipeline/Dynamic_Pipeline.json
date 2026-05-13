@@ -5,6 +5,8 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ForEach_config",
@@ -62,17 +64,42 @@
 				"outputs": [
 					{
 						"referenceName": "DS_ADLS_Bronze",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"para_contianer_name": "bronze"
+						}
 					}
 				]
 			},
 			{
 				"name": "ForEach_config",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Lookup_config",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
-					"isSequential": true
+					"items": {
+						"value": "@activity('Lookup_config').output",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
+					]
 				}
 			},
 			{
@@ -101,7 +128,12 @@
 					},
 					"dataset": {
 						"referenceName": "DS_ADLS_Bronze",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"para_sink_folder": "config",
+							"para_sink_filename": "Config.json",
+							"para_contianer_name": "parameters"
+						}
 					}
 				}
 			}
