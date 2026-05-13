@@ -1,0 +1,52 @@
+[
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Calendar.csv",
+      "para_sink_filename": "Calendar",
+      "para_sink_folder": "Calendar.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Customers.csv",
+      "para_sink_filename": "Customers",
+      "para_sink_folder": "Customers.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Product_Categories.csv",
+      "para_sink_filename": "Product_Categories",
+      "para_sink_folder": "Product_Categories.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Product_Subcategories.csv",
+      "para_sink_filename": "Product_Subcategories",
+      "para_sink_folder": "Product_Subcategories.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Products.csv",
+      "para_sink_filename": "Products",
+      "para_sink_folder": "Products.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Returns.csv",
+      "para_sink_filename": "Returns",
+      "para_sink_folder": "Returns.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Sales_2015.csv",
+      "para_sink_filename": "Sales",
+      "para_sink_folder": "Sales_2015.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Sales_2016.csv",
+      "para_sink_filename": "Sales",
+      "para_sink_folder": "Sales_2016.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Sales_2017.csv",
+      "para_sink_filename": "Sales",
+      "para_sink_folder": "Sales_2017.csv"
+    },
+    {
+      "Para_relative_url": "maheshmgopane/Azure_adventure_Repo/refs/heads/main/Adventure_work/AdventureWorks_Territories.csv",
+      "para_sink_filename": "Territories",
+      "para_sink_folder": "Territories.csv"
+    }
+  ]
